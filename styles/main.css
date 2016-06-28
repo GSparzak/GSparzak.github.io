@@ -13,7 +13,7 @@ nav {
 }
 
 nav a {
-    float: right;
+    float: left;
     padding: 20px;
 }
 .page {
@@ -21,55 +21,31 @@ nav a {
     margin: 0 auto;
     height: 40vh;
     top: 40vh;
-    width: 50vw;
-    color: ghostwhite;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
+    width: 100vw;
     text-align: center;
 }
 
 .font {
+    font-size: 20px;
     color: ghostwhite;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .bold {
-    font-weight: bold;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 22px;
 }
 
-nav ul li a {
-    padding: 10px 20px;
-    color: ghostwhite;
-    text-decoration: none;
-    font-family: "Josefin Sans", Candara, sans-serif;
-    font-weight: 700;
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    top:0;
+    right: -240px;
+    background-color: black;
 }
 
-ul {
-    display: inline-block;
-    float: right;
-    margin-right: 10px;
-    margin-top: 20px;
-}
-
-li {
-    display: inline-block;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-a:hover {
-    color: ghostwhite;
-    font-weight: bold;
-}
-
-a:active {
-    color: darkblue;
-}
-
-a:visited {
-    color: ghostwhite;
+.active {
+    right: 0;
 }
