@@ -44,6 +44,17 @@ nav a {
     text-align: center;
 }
 
+.sidebar {
+width: 240px;
+height: 100vh;
+position: fixed;
+z-index: 100;
+top:0;
+right: -240px;
+background-color: black;
+transition: all 0.5s;
+}
+
 .font {
     font-size: 20px;
     color: ghostwhite;
@@ -53,17 +64,6 @@ nav a {
 .bold {
     font-weight: 600;
     font-size: 22px;
-}
-
-.sidebar {
-    width: 240px;
-    height: 100vh;
-    position: fixed;
-    z-index: 100;
-    top:0;
-    right: -240px;
-    background-color: black;
-    transition: all 0.5s;
 }
 
 .active {
