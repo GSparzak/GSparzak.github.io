@@ -35,7 +35,7 @@ nav a {
     text-decoration: none;
 }
 
-.page {
+.main {
     position: relative;
     margin: 0 auto;
     height: 40vh;
@@ -63,6 +63,7 @@ nav a {
     top:0;
     right: -240px;
     background-color: black;
+    transition: all 0.5s;
 }
 
 .active {
