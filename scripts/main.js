@@ -2,7 +2,7 @@
 
 
 $('.menu').click(function () {
-    $('.sidebar').toggleClass('active');
+    $('.page').toggleClass('active');
     // $('.sidebar').animate('right: 0');
 
 });
