@@ -69,6 +69,10 @@ nav a {
     float: left;
 }
 
+p {
+    padding: 0 10px;
+}
+
 .sidebar {
     width: 10vw;
     height: 100vh;
