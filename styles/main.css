@@ -51,7 +51,7 @@ nav a {
 
 .bold {
     font-weight: 600;
-    font-size: 22px;
+    font-size: 1.3em;
 }
 
 .page {
@@ -134,6 +134,10 @@ span {
     }
 
     .font {
+        font-size: 1em;
+    }
+
+    .bold{
         font-size: 1em;
     }
 
