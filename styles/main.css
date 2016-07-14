@@ -78,6 +78,7 @@ p {
     height: 100vh;
     background-color: #337ab7;
     float:left;
+    display: none;
 }
 
 .sidebar div {
@@ -105,6 +106,10 @@ p {
 
 .active {
     right: 10vw;
+}
+
+.display {
+    display: block;
 }
 
 @media (max-width: 767px) {
