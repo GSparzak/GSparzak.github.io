@@ -44,7 +44,7 @@ nav a {
 }
 
 .font {
-    font-size: 1.5em;
+    font-size: 20px;
     color: ghostwhite;
     font-family: 'Raleway', sans-serif;
 }
@@ -134,7 +134,7 @@ span {
     }
 
     font {
-        font-size: 0.5em;
+        font-size: 10px;
     }
 
     .find-me {
