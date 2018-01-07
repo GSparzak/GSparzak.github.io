@@ -4,7 +4,7 @@ body, div, p, h1 {
 }
 
 body {
-    background-image: url("../images/background.png");
+    background: url("../images/background.png") fixed;
     overflow: hidden;
 }
 
@@ -14,31 +14,19 @@ nav {
     height: 30vh;
 }
 
-nav a {
-    float: right;
-    padding: 20px;
-}
-
-.menu {
+.navicon {
     z-index: 10;
-    margin-right: 20px;
     font-size: 20px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
 }
 
-.menu:link {
-    color: white;
-    text-decoration: none;
-}
-.menu:hover {
-    color: white;
-    text-decoration: none;
-}
-
-.menu:active {
-    color: white;
-    text-decoration: none;
-}
-.menu:visited {
+.navicon:link,
+.navicon:hover,
+.navicon:active,
+.navicon:visited {
     color: white;
     text-decoration: none;
 }
@@ -49,88 +37,115 @@ nav a {
     font-family: 'Raleway', sans-serif;
 }
 
+.font a:link,
+.font a:visited,
+.font a:active {
+    color: #337ab7;
+}
+.font a:hover {
+    color: #3ea4fc;
+}
+
 .bold {
     font-weight: 600;
     font-size: 1.2em;
 }
 
 .page {
-    width: 110vw;
+    width: calc(100vw + 168px);
     height: 100vh;
     position: relative;
-    right:0;
+    left:0;
     top:0;
     transition: all 0.5s;
+    display: flex;
 }
 
 .main {
-    margin: 0 auto;
+    margin: 0;
     width: 100vw;
+    height: 100vh;
     text-align: center;
-    float: left;
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 p {
     padding: 0 10px;
-}
-
-span {
     color: ghostwhite;
 }
 
 .sidebar {
-    width: 10vw;
+    width: 168px;
+    min-width: 168px;
     height: 100vh;
     background-color: #337ab7;
-    float:left;
-    display: none;
 }
 
-.sidebar div, .find-me {
-    padding-top: 10%;
-    padding-left: 10%;
-    padding-right: 10%;
-    display: inline-block;
+.sidebar div {
+    padding: 20px 20px 0;
 }
 
-.sidebar a:link {
-    color: ghostwhite;
+.find-me {
+    padding: 20px 20px 0;
+    font-family: 'Raleway', sans-serif;
 }
 
-.sidebar a:hover {
-    color: ghostwhite;
+.sidebar div a img, .sidebar div a span {
+    vertical-align: middle;
 }
 
-.sidebar a:visited {
-    color: ghostwhite;
+.sidebar div a img {
+    padding-right: 10px;
 }
 
+.sidebar a:link,
+.sidebar a:visited,
+.sidebar a:hover,
 .sidebar a:active {
     color: ghostwhite;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+
+.sidebar a:hover span {
+    font-weight: 600;
+}
+
+.sidebar a:hover img {
+    transform: scale(1.2);
 }
 
 .active {
-    right: 10vw;
-}
-
-.display {
-    display: block;
+    left: -168px;
 }
 
 @media screen and (max-width: 767px) {
     .page {
         width: 100vw;
-        height: 110vh;
+        height: auto;
+        flex-direction: column;
     }
 
     .main {
-        height: 100vh;
+        width: 100%;
     }
     .sidebar {
-        width: 100vw;
+        width: 100%;
         padding: 5px 0;
-        height: 20vh;
+        height: auto;
         text-align: center;
+        position: absolute;
+        bottom: -20%;
+        display: flex;
+        flex-wrap: wrap;
+        transition: bottom 0.5s ease;
     }
 
     .font {
@@ -142,24 +157,23 @@ span {
     }
 
     .find-me {
-        display: block;
+        width: 100%;
         padding: 0;
         margin: 0;
     }
 
     .sidebar div {
-    width: 35vw;
+    width: 50%;
     padding: 5px 0;
     text-align: center;
 }
 
     .active {
-        top: -75px;
-        right: 0;
-        clear: both;
+        /* top: -75px; */
+        left: 0;
     }
-    .menu {
-        position: fixed;
-        right: 0;
+
+    .active .sidebar {
+        bottom: 0;
     }
 }

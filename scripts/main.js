@@ -1,7 +1,6 @@
 'use strict';
 
 
-$('.menu').click(function () {
+$('#navicon').click(function () {
     $('.page').toggleClass('active');
-    $('.sidebar').toggleClass('display');
 });
